@@ -1,3 +1,6 @@
+Step 1: sudo nano /etc/nginx/sites-available/your_project
+
+
 server {
  #   listen 80;
 
@@ -11,3 +14,7 @@ server {
         proxy_set_header X-Forwarded-Proto $scheme;
     }
 }
+
+Step 2: sudo ln -s /etc/nginx/sites-available/your_project /etc/nginx/sites-enabled/
+
+Step 3: sudo nginx -t
