@@ -18,3 +18,8 @@ server {
 Step 2: sudo ln -s /etc/nginx/sites-available/your_project /etc/nginx/sites-enabled/
 
 Step 3: sudo nginx -t
+
+Step 4: sudo crontab -e
+
+  0 3 * * * certbot renew --quiet && systemctl reload nginx
+
